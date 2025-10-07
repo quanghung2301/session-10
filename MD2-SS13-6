@@ -1,0 +1,29 @@
+// xóa độc giả có id = 1 ra khỏi bảng readers với điều kiện độc giả đó chưa từng mượn sách
+DELETE FROM readers
+WHERE readerId = 1 AND NOT EXISTS (
+    SELECT * FROM borrows WHERE readerId = 1
+);
+
+// xóa độc giả có id = 1  ra khỏi bảng readers nếu độc giả đã từng mượn sách
+DELETE FROM borrows
+WHERE readerId = 1;
+
+DELETE FROM readers
+WHERE readerId = 1;
+
+// xóa sách có id = 1  ra khỏi bảng books nếu sách đó chưa từng bị mượn
+DELETE FROM books
+WHERE bookId = 1 AND NOT EXISTS (
+    SELECT * FROM borrows WHERE bookId = 1
+);
+
+// xóa sách có id = 1  ra khỏi bảng books nếu sách đó đã từng bị mượn 
+DELETE FROM borrows
+WHERE bookId = 1;
+
+DELETE FROM books
+WHERE bookId = 1;
+
+// xóa phiếu mượn theo id
+DELETE FROM borrows
+WHERE borrowId = 1;
