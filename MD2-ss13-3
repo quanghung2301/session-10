@@ -1,0 +1,21 @@
+// chèn dữ liệu vào bảng
+INSERT INTO books (title, author, publishedYear, category) VALUES
+('A Tale of Two Cities', 'Charles Dickens', 1859, 'Historical Fiction'),
+('Brave New World', 'Aldous Huxley', 1932, 'Dystopian'),
+('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Classic'),
+('1984', 'George Orwell', 1949, 'Dystopian'),
+('Animal Farm', 'George Orwell', 1945, 'Political Fiction'),
+('The Catcher in the Rye', 'J.D. Salinger', 1951, 'Classic'),
+('To Kill a Mockingbird', 'Harper Lee', 1960, 'Classic'),
+('Pride and Prejudice', 'Jane Austen', 1813, 'Romance'),
+('The Hobbit', 'J.R.R. Tolkien', 1937, 'Fantasy'),
+('The Alchemist', 'Paulo Coelho', 1988, 'Adventure');
+
+// cập nhật thông  tin
+UPDATE books
+SET author = 'Nguyễn Văn A'
+WHERE bookId = 1;
+
+// truy vấn sách
+SELECT * FROM books
+WHERE title LIKE 'A%' OR title LIKE 'B%';
