@@ -1,0 +1,21 @@
+// chèn dữ liệu vào bảng 
+INSERT INTO readers (name, birthDate, address, phoneNumber) VALUES
+('Nguyễn Văn A', '1992-05-15', 'Hà Nội', '0123456789'),
+('Trần Thị B', '1985-08-20', 'TP Hồ Chí Minh', '0987654321'),
+('Lê Văn C', '1970-12-10', 'Đà Nẵng', '0112233445'),
+('Phạm Thị D', '1995-03-30', 'Cần Thơ', '0198765432'),
+('Nguyễn Văn E', '1980-07-22', 'Hải Phòng', '0123987654'),
+('Trần Văn F', '1965-11-05', 'Nha Trang', '0156789012'),
+('Lê Thị G', '1998-01-25', 'Biên Hòa', '0167890123'),
+('Phạm Văn H', '1982-09-15', 'Vũng Tàu', '0178901234'),
+('Nguyễn Thị I', '1973-04-18', 'Thủ Dầu Một', '0189012345'),
+('Trần Văn J', '1990-06-12', 'Đà Lạt', '0190123456');
+
+// cập nhật thông  tin
+UPDATE readers
+SET name = CONCAT(name, ' genZ')
+WHERE YEAR(birthDate) BETWEEN 1990 AND 2000;
+
+// thực hiện truy  vấn
+SELECT * FROM readers
+WHERE birthDate < '1975-01-01';
