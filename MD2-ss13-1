@@ -1,0 +1,25 @@
+1. Các Thực Thể Chính
+•	Sách
+o	Thuộc tính: 
+	Mã sách (Primary Key)
+	Tên sách
+	Tác giả
+	Năm xuất bản
+	Thể loại
+•	Độc giả
+o	Thuộc tính: 
+	Mã độc giả (Primary Key)
+	Tên độc giả
+	Ngày sinh
+	Địa chỉ
+	Số điện thoại
+•	Mượn
+o	Thuộc tính: 
+	Mã mượn (Primary Key)
+	Ngày mượn
+	Ngày trả
+	Mã sách (Foreign Key)
+	Mã độc giả (Foreign Key)
+2. Quan Hệ
+•	Độc giả có thể Mượn nhiều Sách.
+•	Sách có thể được Mượn bởi nhiều Độc giả.
