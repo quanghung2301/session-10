@@ -1,1 +1,22 @@
 
+// chèn dữ liệu
+INSERT INTO borrows (borrowDate, returnDate, bookId, readerId) VALUES
+('2023-05-01', NULL, 1, 1),
+('2023-05-02', NULL, 2, 2),
+('2023-05-03', '2023-05-10', 3, 3),
+('2023-05-04', NULL, 4, 4),
+('2023-05-05', '2023-05-15', 5, 5),
+('2023-05-06', NULL, 6, 6),
+('2023-05-07', '2023-05-20', 7, 7),
+('2023-05-08', NULL, 8, 8),
+('2023-05-09', '2023-05-25', 9, 9),
+('2023-05-10', NULL, 10, 10);
+
+// cập nhật thông tin
+UPDATE borrows
+SET returnDate = CURDATE()
+WHERE borrowId = 2;
+
+// truy vấn dữ liệu
+SELECT * FROM borrows
+WHERE bookId = 2 AND returnDate IS NOT NULL;
